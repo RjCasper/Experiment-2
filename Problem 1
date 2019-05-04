@@ -1,0 +1,55 @@
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+
+using namespace std;
+int main ()
+{
+	char ans;
+	int time, total;
+
+//PACKAGE MENU	
+	cout<<"\t\t Robin's Internet Service Provider"<<endl<<endl;
+	cout<<"\t Package A: P995/mo 10 hrs of access. Additional P20/hr."<<endl;
+	cout<<"\t Package B: P1495/mo 20 hrs of access. Additional P10/hr."<<endl;
+	cout<<"\t Package C: P1995/mo of unlimited access"<<endl<<endl;
+
+//INPUT THE PACKAGE	
+do {
+	cout<<"Please enter your package subscription: ";
+	cin>>ans;
+	cout<<endl;
+	cout<<"How many hours did you use?: ";
+	cin>>time;
+	cout<<endl<<endl;
+	
+	/*
+	total = time * additional + constant package monthly fee
+	*/
+	
+	if (ans == 'A' || ans == 'a') 	
+	{
+	
+	total = (time - 10) * 20 + 995;
+	cout<<"Your bill is: "<<total<<endl;
+	}
+	
+	else if (ans == 'B' || ans == 'b') 	
+	{
+	
+	total = (time - 20) * 10 + 1495;
+	cout<<"Your bill is: "<<total<<endl;
+	}
+	
+	else if (ans == 'C' || ans == 'c') 	
+	{
+	total=1995;
+	cout<<"Your bill is: "<<total<<endl;
+	}
+	
+	else
+	cout<<"Invalid input. Pls try again.\n\n"; 
+} while (ans != 'a' || ans != 'A' || ans != 'b' ||ans != 'B' || ans != 'c' ||ans != 'C');
+	system ("pause");
+	return 0;
+}
