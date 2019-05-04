@@ -1,0 +1,215 @@
+#include <iostream>	
+#include <math.h>
+using namespace std;
+
+int main(){
+	
+//PROBLEM 2
+	float gallon;
+	char bal;
+	cout << "PROBLEM 2\n\n";
+	cout << "ROBIN JASPER's PATUBIG\n";
+	cout << "Gallons of water used: ";
+	cin >> gallon;
+	cout << "Do you have unpaid balance? (Y/N): ";
+	cin >> bal;
+	switch (bal){
+		case 'Y':
+			cout << "Your monthly water bill is: PhP " << (1.10*gallon)+35+20;
+			break;
+		case 'y':
+			cout << "Your monthly water bill is: PhP " << (1.10*gallon)+35+20;
+			break;
+		case 'N':
+			cout << "Your monthly water bill is: PhP " << (1.10+gallon)+35;
+			break;
+		case 'n':
+			cout << "Your monthly water bill is: PhP " << (1.10+gallon)+35;
+			break;
+		default: 
+			cout << "Wrong input. This program will terminate.";
+			return 0;
+			break;
+		}
+		
+		cout << endl << endl;
+		system ("pause");
+		system ("cls");
+		
+    
+// problem 3
+	cout << "PROBLEM 3\n\n";
+	float z=2.5;
+	float x,y,v;
+
+cout << "Enter value of x: ";
+cin >> x;
+cout << "Enter value of y: ";
+cin >> y;
+
+if (x==1 && y>1 && y<5){
+	cout.width(10);
+	cout << "V=";
+	v = x*y*z;
+	printf("%.2f", v);
+}
+else if (x==1 && y>=5){
+	cout.width(10);
+	cout << "V=";
+	v = x+(y/z);
+	printf("%.2f", v);
+}
+else if (x==2 && y<=5){
+	 v = (x-y)/z;
+	if (v>0){
+		cout.width(10);
+		cout << "V=";
+		printf("%.2f", v);
+	}
+	else{
+		cout.width(10);
+		cout << "V=";
+		printf("%.2f", v);	
+		}
+	}
+else if (x==2 && y>5){
+	cout.width(10);
+	cout << "V=";
+	v= x-(sqrt(y+z));
+	printf("%.2f", v);
+}
+else{
+	cout.width(10);
+	cout << "V=";
+	v= x+y+z;
+	printf("%.2f", v);
+}
+
+cout << endl << endl;
+system("pause");
+system("cls");	
+		
+		
+//PROBLEM 4
+	int num[3];
+	cout << "PROBLEM 4\n\n";
+	cout << "HIGHEST NUMBER GENERATOR\n";
+	cout << "Enter three numbers: ";
+	for (int i=0; i<3; i++){
+		cin >> num[i];
+	}
+	int high = num[0];
+	for (int i=0; i<3; i++){
+		if (num[i]>high){
+			high = num[i];
+		}	
+	}
+	cout << "The HIGHEST number is: " << high;
+	
+	cout << endl << endl;
+	system("pause");
+	system ("cls");
+
+
+// problem 5
+	cout << "PROBLEM 5\n\n";
+	cout << "count numbers separated by commas up to 10\n";
+	cout << "count numbers by 2's from 10 until 30\n\n\n";
+	for (int i=1; i<=10; i++){
+	{
+	cout << i << ",";
+}
+if (i==10){
+	for (int j=10; j<=28; j++,j++){
+			cout << j+2;
+		if (j<28)
+		cout << ',';
+		}
+	}	
+}
+
+
+cout << endl << endl;
+system("pause");
+system("cls");
+
+
+//PROBLEM 6
+	int fir = 0, sec = 1, third;
+	cout << "PROBLEM 6\n\n";
+	cout << "20 FIBONACCI NUMBERS\n\n";
+	cout << "The Fibonacci number until the 20th digit is: \n";
+	for (int i=1; i<22; i++){
+		if (i == 1){
+			cout << fir << ',' << sec << ',';
+		}
+		else{
+			third = fir + sec;
+			fir = sec;
+			sec = third;
+			cout << third; 
+			if (third < 10946){
+				cout << ',';
+			}
+		}	
+	}	
+	
+	cout << endl << endl;
+	system ("pause");
+	system ("cls");
+
+
+//PROBLEM 7
+	int n;
+	int sum = 0;
+	cout << "PROBLEM 7\n\n";
+	cout << "SUM OF WHOLE NUMBERS\n";
+	cout << "Enter a number: ";
+	cin >> n;
+	cout << endl;
+	for (int i=1; i<=n; i++){
+		sum+=i;
+	}
+	
+	cout << "The sum of all whole numbers from 1 to " << n << " is: " << sum;
+	
+	cout << endl << endl;
+	system("pause");
+	system("cls");
+	
+  
+// problem 8
+	cout << "PROBLEM 8\n\n";
+	cout << "Multiplication table of a number (up to x10)\n\n";
+	int r;
+cout << "Enter a value: ";
+cin >> r;
+
+for (int i=1; i<=10; i++){
+	cout << i << '*'<< r << '=' << i*r<< endl;			
+	}
+	
+	cout << endl << endl;
+system("pause");
+system("cls");
+	
+  
+//PROBLEM 9
+	int row, col;
+	cout << "PROBLEM 9\n\n";
+	cout << "ASTERISK TABLE\n";
+	cout << "Enter number of rows: ";
+	cin >> row;
+	cout << "Enter number of columns: ";
+	cin >> col;
+	cout << "\n\n";
+for (int j=0; j<row; j++){
+		for (int i=0; i<col; i++){
+		cout << '*';
+	}
+	cout << endl;	
+}	
+
+		
+	return 0;
+}
